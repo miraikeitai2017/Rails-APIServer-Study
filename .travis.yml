@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.4.0
+git:
+  submodules: false
+cache: bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+script:
+- bundle exec rake test
+notifications:
+  slack:
+    secure: lpvWaiBk42lFB+exgDvgJrK/cJb3/usE9hqEMaJMe+iKHjzLfOC18jxD1Gqyw3WKulL+B5W6ljasTlDIqNLT6rSRkRUpkY6L0YgX3KXl6qo7f2HFW0KaWmLqG/5yMlaMNEr5K5x3nJf1AagkmAEHgiQFg5tHZha5P3ht+EA/UHId0iihu0B48BW/xVZQeXmrUKoIHzlPmhNV3i1niOH9yr5fQbok+YvltnRe064Q49qIoLaD4Zl8Um89AblpiwJcTO3kfpZRNRKdDCekWGI6cb22qWsSLJ3NDBSAl1T32IdA4nRAAqKbTqDN/Ohp9pfrQEbYhAVvYX9f8Nk7E9iDBkxrnOblXhQ911kaO/BV6lzdm43LDZCSUl2G/RZwgs1PqoF093m1aXSrKR9F6xTgrihodgbytHBNg+C376NtecxSw8nn9eybcEgQ/iJ490HyRsxFhk2j8l4VEm5rJXoz9LnNXyR9NQPPWF7YkjGB7LEW3UlTv3dBZa4xYCjodCQS5nTCKBIIi9FydV9F2AvRVEuM75kTfURMS6ObqBJXGiaUDK0cjviCqKHz0Pud6LpIB7ntCAWb504ZTxz8jWCsG8ZgrI98ZvQWm7x1O28VIMDL0rRkT1/5vRjLFRMmdptqd7Iq7dpok2FkTggdoCaw1YEDRDr5N7e2f8aDuZt7Vgg=
